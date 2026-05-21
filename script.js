@@ -582,16 +582,3 @@ window.addEventListener('DOMContentLoaded', () => {
   hero.style.opacity = '1';
   hero.style.pointerEvents = 'all';
 });
-// Birthday music
-const birthdayMusic = new Audio('happy.mp3');
-
-window.addEventListener('DOMContentLoaded', () => {
-    const startBtn = document.getElementById('heroBtn');
-
-    if(startBtn){
-        startBtn.addEventListener('click', () => {
-            birthdayMusic.volume = 0.7;
-            birthdayMusic.play();
-        });
-    }
-});
