@@ -287,10 +287,16 @@ function startCelebration() {
 
   // Music
   const music = document.getElementById('bgMusic');
-  if (music) {
+
+if (music) {
+    music.load();
+
     music.volume = 0.6;
-    music.play().catch(() => {});
-  }
+
+    music.play()
+      .then(() => console.log("🎵 MUSIC STARTED"))
+      .catch(err => console.log("MUSIC ERROR:", err));
+}
 
   goToScreen('screen-message');
 }
